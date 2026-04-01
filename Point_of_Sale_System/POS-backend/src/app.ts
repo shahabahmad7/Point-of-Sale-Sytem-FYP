@@ -13,6 +13,7 @@ import orderRoutes from "./routes/orderRoutes";
 import mainInventoryRoutes from "./routes/mainInventoryRoutes";
 import kitchenInventoryRoutes from "./routes/kitchenInventoryRoutes";
 import tableRoutes from "./routes/tableRoutes";
+import aiRoutes from "./routes/aiRoutes";
 import GlobalErrorHandler from "./controllers/errorController";
 import helmet from "helmet";
 import mongoSanitize from "express-mongo-sanitize";
@@ -86,6 +87,7 @@ app.use("/api/v1/orders", orderRoutes);
 app.use("/api/v1/inventories/main", mainInventoryRoutes);
 app.use("/api/v1/inventories/kitchen", kitchenInventoryRoutes);
 app.use("/api/v1/tables", tableRoutes);
+app.use("/api/v1/ai", aiRoutes);
 
 /**
  * Error handling
